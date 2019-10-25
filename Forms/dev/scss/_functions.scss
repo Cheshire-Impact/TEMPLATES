@@ -1,0 +1,7 @@
+@function font-stack($font) {
+  @return map-get($font-stack, $font);
+}
+
+@function font-size($font) {
+  @return map-get($font-stack, $font);
+}
