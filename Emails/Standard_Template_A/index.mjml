@@ -1,0 +1,659 @@
+<mjml>
+  <mj-head>
+    <!-- ############# CHESHIRE IMPACT TEMPLATE INSTRUCTIONS ############# -->
+    <!--
+    
+    Follow these steps to quickly customize the default template and prepare it for Pardot.
+
+    *** NOTE: You can skip any of these steps if the default can be used. ***
+
+    STEP 1: SET EMAIL BACKGROUND COLOR AND WIDTH, AND UPDATE THE DEFAULT BACKGROUND COLOR OF THE SECTIONS TO MATCH
+
+      FIND: <mj-body background-color="#f6f6f6" width="600px" />
+      REPLACE: <mj-body background-color="CUSTOM" width="CUSTOM"  />
+
+      FIND: <mj-section background-color="#f6f6f6" />
+      REPLACE: <mj-section background-color="SAMEASABOVE" />
+
+    STEP 2: SET A CUSTOM WEBFONT
+
+      If the client wants to use a custom webfont you can go to https://fonts.google.com/, select the appropriate font and grab the source URL (EX: https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap). Make sure you grab all of the applicable Styles that you'll need (light, bold, italic, etc.)
+      
+      Next, Find & Replace the following code with your custom style choosing a name for you font:
+
+        FIND:  <mj-font name="Open Sans" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" />
+
+        REPLACE:  <mj-font name="CUSTOM" href="CUSTOM" />
+
+      Next, swap out the usages of the custom font. Make sure you se:
+
+        FIND: <mj-class name="openSans" font-family="'Open Sans',Arial,Helvetica,sans-serif" />
+        REPLACE: <mj-class name="CUSTOM" font-family="CUSTOM" />
+    
+          
+    STEP 3: UPDATE THE DEFAULT HEADING SIZES, LINE HEIGHTS, WEIGHTS
+
+      These are applied to content <div>'s as mj-classes instead of the standard HTML elements (EX: <h1>) to make editing content in Pardot easier for the client. If you need to adjust the size of the default headings you can find and replace the following:
+
+          FIND:
+
+            <mj-class name="h1" font-size="32px" line-height="40px" font-weight="700" />
+            <mj-class name="h2" font-size="26px" line-height="33px" font-weight="700" />
+            <mj-class name="h3" font-size="22px" line-height="28px" font-weight="700" />
+            <mj-class name="h4" font-size="18px" line-height="23px" font-weight="700" />
+            <mj-class name="h5" font-size="13px" line-height="17px" font-weight="400" />
+            <mj-class name="h6" font-size="10px" line-height="13px" font-weight="400" />
+    
+          REPLACE:
+
+            <mj-class name="h1" font-size="CUSTOM" line-height="CUSTOM" font-weight="CUSTOM" />
+            <mj-class name="h2" font-size="CUSTOM" line-height="CUSTOM" font-weight="CUSTOM" />
+            <mj-class name="h3" font-size="CUSTOM" line-height="CUSTOM" font-weight="CUSTOM" />
+            <mj-class name="h4" font-size="CUSTOM" line-height="CUSTOM" font-weight="CUSTOM" />
+            <mj-class name="h5" font-size="CUSTOM" line-height="CUSTOM" font-weight="CUSTOM" />
+            <mj-class name="h6" font-size="CUSTOM" line-height="CUSTOM" font-weight="CUSTOM" />
+
+    
+    STEP 4: SET THE CUSTOM FONT AND BACKGROUND COLORS
+
+      *** IMPORTANT: Because these colors are used in so many places in the template, do a find and replace on each color code. DO NOT include the semi-colon as some of these are set as !important and some are not.
+
+      Primary Color (Chesh Blue)
+      
+        FIND: rgb(9, 43, 76)
+        REPLACE: CUSTOM
+      
+      Highlight Color (Chesh Orange)
+      
+        FIND: rgb(255, 115, 0)
+        REPLACE: CUSTOM
+
+      Secondary Color (Baby Blue Used for Content of Blue Callout Box)
+    
+        FIND: rgb(143, 167, 188)
+        REPLACE: CUSTOM
+
+      Grey Text (Used for Header Text)
+
+        FIND: rgb(144, 144, 144)
+        REPLACE: CUSTOM
+
+    
+    STEP 5: STYLE THE NAVBAR ITEMS
+
+      These are handled differently than standard links so you need to style these manually here:
+
+        FIND: <mj-navbar-link color="rgb(255, 115, 0)" text-transform="uppercase" font-weight="700" font-size="14px" />
+        REPLACE: <mj-navbar-link color="CUSTOMCOLOR" text-transform="CUSTOMTRANSFORM" font-weight="CUSTOMWEIGHT" font-size="CUSTOMFONTSIZE" />
+
+    STEP 6: STYLE THE BUTTONS
+
+        First, style the default button:
+
+          FIND: <mj-button font-weight="700" text-transform="uppercase" border-radius="2px" rel="pardot-region" />
+          REPLACE: <mj-button font-weight="CUSTOMWEIGHT" text-transform="CUSTOMTRANSFORM" border-radius="CUSTOMRADIUS" rel="pardot-region" />
+
+        Next, style the bigButton that is displayed in the main article section
+
+          FIND: <mj-class name="bigButton" font-size="18px" />
+          REPLACE: <mj-class name="bigButton" font-size="CUSTOMFONTSIZE" />
+
+    STEP 7: STYLE THE DIVIDER
+
+        Style the thin divider line in the default template:
+
+          FIND: <mj-divider border-width="1px" border-style="solid" border-color="#e3e3e3" />
+          REPLACE: <mj-divider border-width="CUSTOMWIDTH" border-style="CUSTOMSTYLE" border-color="CUSTOMCOLOR" />
+
+    STEP 8: EDIT IMAGES
+
+      To update the logos, replace the src="" element in the <mj-image /> tag. While you are doing this, add the href="www.clientwebsite.com" element to the <mj-image /> tag to have the logo link to the client's website. You can also adjust the width if applicable.
+
+        FIND: <mj-image href="#" src="https://maljenkins.github.io/cheshPublic/images/cheshlogo.png" width="150px" fluid-on-mobile="false" />
+        
+        REPLACE: <mj-image href="WWW.CLIENTWEBSITE.COM" src="PARDOTLOGOURL" width="CUSTOMWIDTH" fluid-on-mobile="false" />
+
+        FIND: <mj-image href="#" src="https://maljenkins.github.io/cheshPublic/images/cheshlogodark.png" width="150px" fluid-on-mobile="false" />
+
+        REPLACE: <mj-image href="WWW.CLIENTWEBSITE.COM" src="PARDOTLOGOURL" width="CUSTOMWIDTH" fluid-on-mobile="false" />
+
+
+      By default, all of the images re-size on mobile. To make an image static add the following attribute to the <mj-image /> element:
+
+        ADD: fluid-on-mobile="true"
+
+      By default, all images have a placeholder link of href="#". To remove a link from an image, add the following to the <mj-image /> element:
+
+        ADD: href=""
+
+    STEP 9: UPDATE THE NAVIGATION BAR
+
+      Update the Text and the links in the Navigation Bar by adjusting the content inside the <mj-navbar-link /> element. NOTE: You'll also want to set the height of the links equal to the height of the logo!!!
+
+    STEP 10: UPDATE THE COPYRIGHT
+
+      FIND: © 2019 Cheshire Impact
+      REPLACE: © 2019 COMPANYNAME
+    
+
+    STEP 11: COMPILE THE MJML INTO HTML
+
+      In the Terminal, locate to the appropriate directory, and use the following command syntax to compile the HTML:
+
+        SYNTAX: mjml NAMEOFTHISFILE.mjml -o NAMEOFTHETEMPLATE.html
+
+    STEP 12: PREPARE PARDOT REGIONS FOR THE EMAIL EDITOR
+
+      Once you've compiled the HTML, open the HTML file. Next, you need to find and replace some different text to make the Pardot regions editable, removable, and repeatable where applicable.
+
+      FIND: id="pardot-region"
+      REPLACE: pardot-region=""
+
+      FIND: alt="pardot-region"
+      REPLACE: pardot-region=""
+
+      FIND: rel="pardot-region"
+      REPLACE: pardot-region=""
+
+      FIND: class="mj-link pardot-region"
+      REPLACE: pardot-region="" class="mj-link"
+
+      FIND: class="pardot-repeat-remove"
+      REPLACE: pardot-repeatable="" pardot-removable=""
+
+    
+    STEP 13: SET DEFAULT FONT FAMILY FOR OLD VERSIONS OF OUTLOOK. DO NOT USE WEB FONTS 
+
+      Because of a quirk in MJML we need to copy and paste some code manually into the HTML document. Go to this following link and copy the code displayed on the page: https://maljenkins.github.io/cheshPublic/snippets/mso_font_snippet.txt
+
+      If the client is using a serif font, you may want to change the font stack in that code snippet to something like:
+      
+        Georgia, Times, 'Times New Roman', serif
+
+      Next, paste that code directly after the <body> tag BEFORE the first <div>
+
+
+    STEP 14: REMOVE ANY UNCESSARY COMMENTS AFTER THESE INSTRUCTIONS
+
+      MJML strips CSS and some other elements leaving empty comments in the HTML document. Remove the unnecessary comments after the last step of these instructions.
+
+    STEP 15: UPLOAD THE HTML INTO PARDOT AND TEST
+
+      Copy and paste the contents of the HTML file into the Pardot email template and test the template.
+
+    -->
+
+
+    <mj-title>%%subject%%</mj-title>
+    <!-- Set A Custom Webfont -->
+    <mj-font name="Open Sans" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" />
+
+
+    <mj-attributes>
+
+      <!-- Spacing Defaults -->
+      <mj-all padding="0px" />
+
+      <mj-section padding-left="10px" padding-right="10px" />
+      <mj-column padding="10px" />
+      <mj-button padding-top="15px" padding-bottom="15px" />
+      <mj-divider padding-top="10px" padding-bottom="10px" />
+      <mj-text padding="5px" />
+      <mj-navbar-link padding-left="10px" padding-right="10px" />
+
+
+      <!-- Handle Pardot Regions -->
+      <mj-section css-class="pardot-repeat-remove" background-color="#fff" />
+      <mj-navbar-link css-class="pardot-region" />
+      <mj-image rel="pardot-region" />
+      <mj-button css-class="pardot-removable" />
+
+
+
+      <!-- Background Colors -->
+
+      <mj-body background-color="#f6f6f6" />
+      <mj-section background-color="#fff" />
+      <mj-class name="darkBG" background-color="#092b4c" />
+
+
+
+
+
+      <!-- Default Styles for All Elements -->
+      <mj-all color="#000" font-family="'Open Sans',Arial, Helvetica, sans-serif" font-size="14px" line-height="21px" />
+
+      <!-- Custom Text Colors -->
+      <mj-class name="highlightText" color="rgb(255, 115, 0)" />
+      <mj-class name="primaryText" color="rgb(9, 43, 76)" />
+      <mj-class name="secondaryText" color="rgb(143, 167, 188)" />
+      <mj-class name="greyText" color="rgb(144, 144, 144)" />
+      <mj-class name="whiteText" color="#fff" />
+
+
+      <!-- Create Classes For Traditional HTML Elements -->
+      <mj-class name="h1" font-size="32px" line-height="40px" font-weight="700" />
+      <mj-class name="h2" font-size="26px" line-height="33px" font-weight="700" />
+      <mj-class name="h3" font-size="22px" line-height="28px" font-weight="700" />
+      <mj-class name="h4" font-size="18px" line-height="23px" font-weight="700" />
+      <mj-class name="h5" font-size="13px" line-height="17px" font-weight="400" />
+      <mj-class name="h6" font-size="10px" line-height="13px" font-weight="400" />
+
+
+
+
+
+      <!-- Image Styling *** NOTE: By Default All Images Are Set To Fluid/Responsive And Have A URL Of #, Manually Adjust Static Images and Remove Links With href="" *** -->
+      <mj-image align="center" fluid-on-mobile="true" href="#" />
+
+      <!-- Style Intro Text -->
+      <mj-class name="introText" font-size="10px" />
+
+      <!-- Style Header Nav -->
+      <mj-navbar-link color="rgb(255, 115, 0)" text-transform="uppercase" font-weight="700" font-size="14px" />
+
+      <!-- Button Styles -->
+      <mj-button href="#" font-weight="700" text-transform="uppercase" border-radius="2px" rel="pardot-region" background-color="#ff7300" />
+      <mj-class name="bigButton" font-size="18px" />
+
+      <!-- Default Divider Style -->
+      <mj-divider border-width="1px" border-style="solid" border-color="#e3e3e3" />
+
+      <!-- Standard Classes -->
+      <mj-class name="readMore" background-color="none" align="left" color="rgb(255, 115, 0)" inner-padding="5px" />
+
+
+    </mj-attributes>
+
+    <!-- Styles Place In Head -->
+    <mj-style>
+      a {
+        color: red;
+      }
+
+      a:link {
+        color: red;
+      }
+
+      a:visited {
+        color: red;
+      }
+    </mj-style>
+
+    <!-- Inline Styles -->
+    <mj-style inline="inline">
+      .primaryText {
+        color: rgb(9, 43, 76);
+      }
+
+      a.primaryLink,
+      a.primaryLink span {
+        color: rgb(9, 43, 76) !important;
+        text-decoration: none !important;
+      }
+
+      .highlightText {
+        color: rgb(255, 115, 0);
+      }
+
+      a.highlightLink,
+      a.highlightLink span {
+        color: rgb(255, 115, 0) !important;
+        text-decoration: none !important;
+      }
+
+      .secondaryText {
+        color: rgb(143, 167, 188);
+      }
+
+      a.secondaryLink,
+      a.secondaryLink span {
+        color: rgb(143, 167, 188) !important;
+        text-decoration: none !important;
+      }
+
+      .greyText {
+        color: rgb(144, 144, 144) !important;
+      }
+
+      a.greyLink,
+      a.greyLink span {
+        color: rgb(144, 144, 144) !important;
+      }
+
+      a.whiteLink,
+      a.whiteLink span {
+        color: #fff !important;
+        text-decoration: none !important;
+      }
+
+      .whiteText {
+        color: #fff !important;
+      }
+    </mj-style>
+
+    <!-- Media Queries -->
+
+    <mj-style>
+      @media (max-width:480px) {
+      td.mobileCenter > div {
+      width: 100% !important;
+      text-align: center !important;
+      }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <!-- Intro Text -->
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="greyText h6 openSans" css-class="mobileCenter" align="left">
+          <div id="pardot-region">Header text appears here.</div>
+        </mj-text>
+      </mj-column>
+      <mj-column>
+        <mj-text mj-class="greyText h6" css-class="mobileCenter" align="right">
+          Can't see this email? <a href="%%view_online%%" class="greyLink"><span>View Online</span></a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- Email Header and Nav -->
+    <mj-section padding="30px 0px 0px 0px">
+      <mj-column>
+        <mj-image href="#" src="https://maljenkins.github.io/cheshPublic/images/cheshlogo.png" width="150px" fluid-on-mobile="false" />
+      </mj-column>
+      <mj-column>
+        <!-- Set Navbar Link Line Height Equal To Logo Height -->
+        <mj-navbar>
+          <mj-navbar-link href="#" line-height="38px">
+            Product
+          </mj-navbar-link>
+          <mj-navbar-link href="#" line-height="38px">
+            Customers
+          </mj-navbar-link>
+          <mj-navbar-link href="#" line-height="38px">
+            Company
+          </mj-navbar-link>
+        </mj-navbar>
+      </mj-column>
+    </mj-section>
+
+    <!-- Full Width Image -->
+    <mj-section padding-top="0px" padding-bottom="0px" padding-left="0px" padding-right="0px">
+      <mj-column padding="0px">
+        <mj-image src="http://via.placeholder.com/600x300" padding="0px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Headline, Numbered List, Text, Button -->
+    <mj-section>
+      <mj-column>
+        <!-- Two Color Heading ** Use <span class="highlightText" for highlight-->
+        <mj-text mj-class="h1 primaryText" align="center" padding-top="15px" padding-bottom="15px">
+          <div id="pardot-region">Lorem ipsum dolor sit amet <span class="highlightText">consectetur adipiscing</span> elit roldor</div>
+        </mj-text>
+        <!-- Numbered List Table ** Start with <tr> or <th> ** -->
+        <mj-table width="70%" align="center">
+          <tr>
+            <td pardot-region="" class="highlightText" width="40px" valign="top" style="font-size:21px;font-weight:bold; padding-top:5px">1.</td>
+            <td pardot-region="" valign="top">Donec id metus et eros porttitor ultrices. Praesent quis diam sit amet massa pellentesque auctor at ac massa.</td>
+          </tr>
+          <tr>
+            <td pardot-region="" class="highlightText" width="40px" valign="top" style="font-size:21px;font-weight:bold; padding-top:5px">2.</td>
+            <td pardot-region="" valign="top">Donec id metus et eros porttitor ultrices. Praesent quis diam sit amet massa pellentesque auctor at ac massa.</td>
+          </tr>
+          <tr>
+            <td pardot-region="" class="highlightText" width="40px" valign="top" style="font-size:21px;font-weight:bold; padding-top:5px">3.</td>
+            <td pardot-region="" valign="top">Donec id metus et eros porttitor ultrices. Praesent quis diam sit amet massa pellentesque auctor at ac massa.</td>
+          </tr>
+        </mj-table>
+        <!-- Centered Text -->
+        <mj-text align="center">
+          <div id="pardot-region">Nullam eu tempus dui, et iaculis massa. Duis efficitur turpis sed suscipit imperdiet. Ut euismod malesuada orci, at tincidunt mauris condimentum malesuada. Nulla nec dictum velit.</div>
+        </mj-text>
+        <!-- Centered Large Button -->
+        <mj-button mj-class="whiteText bigButton">
+          Learn More About Our Services
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Section With Primary Background Color and White Text -->
+    <mj-section mj-class="darkBG">
+      <mj-column>
+        <!-- Heading -->
+        <mj-text align="center" mj-class="h1 whiteText">
+          <div id="pardot-region">LOREM IPSUM DOLOR SIT AMET</div>
+        </mj-text>
+        <!-- Content -->
+        <mj-text align="center" mj-class="secondaryText">
+          <div id="pardot-region">Vestibulum at fermentum diam. Integer suscipit erat quis risus tempor bibendum. Quisque vulputate est felis, tincidunt consectetur lorem tristique nec. Aenean dapibus hendrerit dolor vitae placerat. Etiam sem enim, aliquet sit amet nisl vitae, maximus ornare eros.</div>
+        </mj-text>
+        <!-- Centered Button -->
+        <mj-button mj-class="whiteText">
+          RSVP Now
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- 35/65 Section with Image Left & Article Right -->
+    <mj-section padding-top="40px">
+      <mj-column width="35%">
+        <mj-image src="http://via.placeholder.com/480x480" align="center" />
+      </mj-column>
+      <mj-column width="65%">
+        <!-- Article Header -->
+        <mj-text mj-class="h4 primaryText">
+          <div id="pardot-region">LOREM IPSUMING</div>
+        </mj-text>
+        <!-- Article Text -->
+        <mj-text>
+          <div id="pardot-region">Nullam eu tempus dui, et iaculis massa. Duis efficitur turpis sed suscipit imperdiet. Ut euismod malesuada orci, at tincidunt mauris condimentum malesuada. Nulla nec dictum velit, congue semper mauris.</div>
+        </mj-text>
+
+        <!-- Article Link -->
+        <mj-button mj-class="readMore">
+          Read More
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- 65/35 Section with Article Left & Image Right -->
+    <mj-section direction="rtl">
+      <mj-column width="35%">
+        <mj-image src="http://via.placeholder.com/480x480" align="center" />
+      </mj-column>
+      <mj-column width="65%">
+        <!-- Article Header -->
+        <mj-text mj-class="h4 primaryText">
+          <div id="pardot-region">LOREM IPSUMING</div>
+        </mj-text>
+        <!-- Article Text -->
+        <mj-text>
+          <div id="pardot-region">Nullam eu tempus dui, et iaculis massa. Duis efficitur turpis sed suscipit imperdiet. Ut euismod malesuada orci, at tincidunt mauris condimentum malesuada. Nulla nec dictum velit, congue semper mauris.</div>
+        </mj-text>
+        <!-- Article Link -->
+        <mj-button mj-class="readMore">
+          Read More
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- 35/65 Section with Image Left & Article Right -->
+    <mj-section>
+      <mj-column width="35%">
+        <mj-image src="http://via.placeholder.com/480x480" align="center" />
+      </mj-column>
+      <mj-column width="65%">
+        <!-- Article Header -->
+        <mj-text mj-class="h4 primaryText">
+          <div id="pardot-region">LOREM IPSUMING</div>
+        </mj-text>
+        <!-- Article Text -->
+        <mj-text>
+          <div id="pardot-region">Nullam eu tempus dui, et iaculis massa. Duis efficitur turpis sed suscipit imperdiet. Ut euismod malesuada orci, at tincidunt mauris condimentum malesuada. Nulla nec dictum velit, congue semper mauris.</div>
+        </mj-text>
+        <!-- Article Link -->
+        <mj-button mj-class="readMore">
+          Read More
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Divider Section -->
+    <mj-section>
+      <mj-column>
+        <mj-divider />
+      </mj-column>
+    </mj-section>
+
+    <!-- 50/50 Section with Image Left & Article Right -->
+    <mj-section>
+      <mj-column width="50%">
+        <mj-image src="http://via.placeholder.com/480x360" align="center" />
+      </mj-column>
+      <mj-column width="50%">
+        <!-- Article Header -->
+        <mj-text mj-class="h4 primaryText">
+          <div id="pardot-region">LOREM IPSUMING</div>
+        </mj-text>
+        <!-- Article Text -->
+        <mj-text>
+          <div id="pardot-region">Nullam eu tempus dui, et iaculis massa. Duis efficitur turpis sed suscipit imperdiet. Ut euismod malesuada orci.</div>
+        </mj-text>
+        <!-- Button -->
+        <mj-button mj-class="whiteText" align="left">
+          Learn More
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- 50/50 Section with Article Left & Image Right -->
+    <mj-section direction="rtl">
+      <mj-column width="50%">
+        <mj-image src="http://via.placeholder.com/480x360" align="center" />
+      </mj-column>
+      <mj-column width="50%">
+        <!-- Article Header -->
+        <mj-text mj-class="h4 primaryText">
+          <div id="pardot-region">LOREM IPSUMING</div>
+        </mj-text>
+        <!-- Article Text -->
+        <mj-text>
+          <div id="pardot-region">Nullam eu tempus dui, et iaculis massa. Duis efficitur turpis sed suscipit imperdiet. Ut euismod malesuada orci.</div>
+        </mj-text>
+        <!-- Button -->
+        <mj-button mj-class="whiteText" align="left">
+          Learn More
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Divider Section -->
+    <mj-section>
+      <mj-column>
+        <mj-divider />
+      </mj-column>
+    </mj-section>
+
+    <!-- 50/50 Section with Image on Top of Article -->
+    <mj-section>
+      <mj-column width="50%">
+        <!-- Aricle Image -->
+        <mj-image src="http://via.placeholder.com/480x360" align="center" />
+        <!-- Article Header -->
+        <mj-text mj-class="h4 primaryText">
+          <div id="pardot-region">LOREM IPSUMING</div>
+        </mj-text>
+        <!-- Article Text -->
+        <mj-text>
+          <div id="pardot-region">Nullam eu tempus dui, et iaculis massa. Duis efficitur turpis sed suscipit imperdiet. Ut euismod malesuada orci.</div>
+        </mj-text>
+        <!-- Button -->
+        <mj-button mj-class="whiteText" align="left">
+          Learn More
+        </mj-button>
+      </mj-column>
+      <mj-column width="50%">
+        <!-- Aricle Image -->
+        <mj-image src="http://via.placeholder.com/480x360" align="center" />
+        <!-- Article Header -->
+        <mj-text mj-class="h4 primaryText">
+          <div id="pardot-region">LOREM IPSUMING</div>
+        </mj-text>
+        <!-- Article Text -->
+        <mj-text>
+          <div id="pardot-region">Nullam eu tempus dui, et iaculis massa. Duis efficitur turpis sed suscipit imperdiet. Ut euismod malesuada orci.</div>
+        </mj-text>
+        <!-- Button -->
+        <mj-button mj-class="whiteText" align="left">
+          Learn More
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Divider Section -->
+    <mj-section>
+      <mj-column>
+        <mj-divider />
+      </mj-column>
+    </mj-section>
+
+    <!-- 33/33/33 Section with Image on Top of Article -->
+    <mj-section>
+      <mj-column width="33%">
+        <!-- Aricle Image -->
+        <mj-image src="http://placehold.it/480x480" align="center" />
+        <!-- Article Text -->
+        <mj-text align="center">
+          <div id="pardot-region">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        </mj-text>
+        <!-- Button -->
+        <mj-button mj-class="whiteText">
+          Learn More
+        </mj-button>
+      </mj-column>
+      <mj-column width="33%">
+        <!-- Aricle Image -->
+        <mj-image src="http://placehold.it/480x480" align="center" />
+        <!-- Article Text -->
+        <mj-text align="center">
+          <div id="pardot-region">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        </mj-text>
+        <!-- Button -->
+        <mj-button mj-class="whiteText">
+          Learn More
+        </mj-button>
+      </mj-column>
+      <mj-column width="33%">
+        <!-- Aricle Image -->
+        <mj-image src="http://placehold.it/480x480" align="center" />
+        <!-- Article Text -->
+        <mj-text align="center">
+          <div id="pardot-region">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        </mj-text>
+        <!-- Button -->
+        <mj-button mj-class="whiteText">
+          Learn More
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer Section -->
+    <mj-section mj-class="darkBG" padding="40px 0px 10px 0px">
+      <!-- Left Column Logo -->
+      <mj-column vertical-align="bottom">
+        <mj-image href="#" src="https://maljenkins.github.io/cheshPublic/images/cheshlogodark.png" fluid-on-mobile="false" width="150px" align="left" />
+      </mj-column>
+      <!-- Right Column Footer Text -->
+      <mj-column vertical-align="bottom">
+        <mj-text mj-class="whiteText h6" align="right" padding-top="0px" padding-bottom="0px">
+          <a pardot-region="" href="#" class="whiteLink"><span>%%account_address%%</span></a>
+        </mj-text>
+        <mj-text mj-class="whiteText h6" align="right" padding-top="0px" padding-bottom="0px">
+          <div id="pardot-region"><a href="%%unsubscribe%%" class="whiteLink"><span>Unsubscribe</span></a> | © 2019 Cheshire Impact</div>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

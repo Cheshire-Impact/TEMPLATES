@@ -1,0 +1,89 @@
+<mjml>
+  <mj-head>
+    <mj-title>%%subject%%</mj-title>
+
+    <!-- Set A Custom Webfont -->
+    <mj-font name="Open Sans" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" />
+
+
+    <mj-attributes>
+      <!-- Spacing Defaults -->
+      <mj-all padding="0px" />
+
+      <mj-section padding-left="10px" padding-right="10px" />
+      <mj-column padding="10px" />
+      <mj-button padding-top="15px" padding-bottom="15px" />
+      <mj-divider padding-top="10px" padding-bottom="10px" />
+      <mj-text padding="5px" />
+      <mj-navbar-link padding-left="10px" padding-right="10px" />
+
+
+      <!-- Handle Pardot Regions -->
+      <mj-section css-class="pardot-repeat-remove" />
+      <mj-navbar-link css-class="pardot-region" />
+      <mj-image rel="pardot-region" />
+      <mj-button css-class="pardot-region" />
+
+
+      <!-- Background Colors -->
+      <mj-body background-color="#f6f6f6" />
+      <mj-section background-color="#fff" />
+
+      <!-- Default Styles for All Elements -->
+      <mj-all color="#000" font-family="'Open Sans',Arial, Helvetica, sans-serif" font-size="14px" line-height="21px" />
+
+      <!-- Custom Text Colors -->
+      <mj-class name="exampleRed" color="#cc0000" />
+
+
+      <!-- Image Styling *** NOTE: By Default All Images Are Set To Fluid/Responsive And Have A URL Of #, Manually Adjust Static Images and Remove Links With href="" *** -->
+      <mj-image align="center" fluid-on-mobile="true" href="#" />
+
+
+      <!-- Button Styles -->
+      <mj-button href="#" font-weight="700" text-transform="uppercase" border-radius="2px" background-color="#ff7300" />
+
+
+
+    </mj-attributes>
+
+    <!-- Styles Place In Head -->
+    <mj-style>
+      a {
+        color: #000;
+        text-decoration: underline;
+      }
+
+      a:link {
+        color: #000;
+        text-decoration: underline;
+      }
+
+      a:visited {
+        color: #000;
+        text-decoration: underline;
+      }
+    </mj-style>
+
+
+    <!-- Media Queries -->
+
+    <mj-style>
+      @media (max-width:480px) {
+      td.mobileCenter > div {
+      width: 100% !important;
+      text-align: center !important;
+      }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-text>
+          <div class="pardot-region">Example Text</div>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
