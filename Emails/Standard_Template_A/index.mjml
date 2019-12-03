@@ -1,0 +1,430 @@
+<mjml>
+  <mj-head>
+    <mj-title>%%subject%%</mj-title>
+    <!-- Set A Custom Webfont -->
+    <mj-font name="Open Sans" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" />
+
+
+    <mj-attributes>
+
+      <!-- Spacing Defaults -->
+      <mj-all padding="0px" />
+
+      <mj-section padding-left="10px" padding-right="10px" />
+      <mj-column padding="10px" />
+      <mj-button padding-top="15px" padding-bottom="15px" />
+      <mj-divider padding-top="10px" padding-bottom="10px" />
+      <mj-text padding="5px" />
+      <mj-navbar-link padding-left="10px" padding-right="10px" />
+
+
+      <!-- Handle Pardot Regions -->
+      <mj-section css-class="pardot-repeat-remove" />
+      <mj-navbar-link css-class="pardot-region" />
+      <mj-image rel="pardot-region" />
+      <mj-button css-class="pardot-removable" />
+
+
+      <!-- Background Colors -->
+      <mj-body background-color="#f6f6f6" />
+      <mj-section background-color="#fff" />
+      <mj-class name="darkBG" background-color="#092b4c" />
+
+
+      <!-- Default Styles for All Elements -->
+      <mj-all color="#000" font-family="'Open Sans',Arial, Helvetica, sans-serif" font-size="14px" line-height="21px" />
+
+      <!-- Custom Text Colors -->
+      <mj-class name="highlightText" color="rgb(255, 115, 0)" />
+      <mj-class name="primaryText" color="rgb(9, 43, 76)" />
+      <mj-class name="secondaryText" color="rgb(143, 167, 188)" />
+      <mj-class name="greyText" color="rgb(144, 144, 144)" />
+      <mj-class name="whiteText" color="#fff" />
+
+
+      <!-- Create Classes For Traditional HTML Elements -->
+      <mj-class name="h1" font-size="32px" line-height="40px" font-weight="700" />
+      <mj-class name="h2" font-size="26px" line-height="33px" font-weight="700" />
+      <mj-class name="h3" font-size="22px" line-height="28px" font-weight="700" />
+      <mj-class name="h4" font-size="18px" line-height="23px" font-weight="700" />
+      <mj-class name="h5" font-size="13px" line-height="17px" font-weight="400" />
+      <mj-class name="h6" font-size="10px" line-height="13px" font-weight="400" />
+
+
+
+
+
+      <!-- Image Styling *** NOTE: By Default All Images Are Set To Fluid/Responsive And Have A URL Of #, Manually Adjust Static Images and Remove Links With href="" *** -->
+      <mj-image align="center" fluid-on-mobile="true" href="#" />
+
+      <!-- Style Intro Text -->
+      <mj-class name="introText" font-size="10px" />
+
+      <!-- Style Header Nav -->
+      <mj-navbar-link color="rgb(255, 115, 0)" text-transform="uppercase" font-weight="700" font-size="12px" />
+
+      <!-- Button Styles -->
+      <mj-button href="#" font-weight="700" text-transform="uppercase" border-radius="2px" rel="pardot-region" background-color="#ff7300" />
+      <mj-class name="bigButton" font-size="18px" />
+
+      <!-- Default Divider Style -->
+      <mj-divider border-width="1px" border-style="solid" border-color="#e3e3e3" />
+
+      <!-- Other Classes -->
+      <mj-class name="readMore" background-color="none" align="left" color="rgb(255, 115, 0)" inner-padding="5px" />
+
+
+    </mj-attributes>
+
+    <!-- Styles Place In Head -->
+    <mj-style>
+      a {
+        color: #000;
+      }
+
+      a:link {
+        color: #000;
+      }
+
+      a:visited {
+        color: #000;
+      }
+
+      a.whiteLink {
+        color: #fff !important;
+        text-decoration: none !important;
+      }
+
+      a.greyLink {
+        color: #909090 !important;
+        text-decoration: none !important;
+      }
+    </mj-style>
+
+
+
+    <!-- Media Queries -->
+
+    <mj-style>
+      @media (max-width:480px) {
+      td.mobileCenter > div {
+      width: 100% !important;
+      text-align: center !important;
+      }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <!-- Intro Text -->
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="greyText h6 openSans" css-class="mobileCenter" align="left">
+          <div id="pardot-region">Header text appears here.</div>
+        </mj-text>
+      </mj-column>
+      <mj-column>
+        <mj-text mj-class="greyText h6" css-class="mobileCenter" align="right">
+          Can't see this email? <a href="%%view_online%%" class="greyLink"><span>View Online</span></a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- Email Header and Nav -->
+    <mj-section padding="30px 0px 0px 0px">
+      <mj-column>
+        <mj-image href="#" src="https://maljenkins.github.io/cheshPublic/images/cheshlogo.png" width="150px" fluid-on-mobile="false" />
+      </mj-column>
+      <mj-column>
+        <!-- Set Navbar Link Line Height Equal To Logo Height -->
+        <mj-navbar>
+          <mj-navbar-link href="#" line-height="38px">
+            Product
+          </mj-navbar-link>
+          <mj-navbar-link href="#" line-height="38px">
+            Customers
+          </mj-navbar-link>
+          <mj-navbar-link href="#" line-height="38px">
+            Company
+          </mj-navbar-link>
+        </mj-navbar>
+      </mj-column>
+    </mj-section>
+
+    <!-- Full Width Image -->
+    <mj-section padding-top="0px" padding-bottom="0px" padding-left="0px" padding-right="0px">
+      <mj-column padding="0px">
+        <mj-image src="http://via.placeholder.com/600x300" padding="0px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Headline, Numbered List, Text, Button -->
+    <mj-section>
+      <mj-column>
+        <!-- Two Color Heading ** Use <span class="highlightText" for highlight-->
+        <mj-text mj-class="h1 primaryText" align="center" padding-top="15px" padding-bottom="15px">
+          <div id="pardot-region">Lorem ipsum dolor sit amet <span class="highlightText">consectetur adipiscing</span> elit roldor</div>
+        </mj-text>
+        <!-- Numbered List Table ** Start with <tr> or <th> ** -->
+        <mj-table width="70%" align="center">
+          <tr>
+            <td pardot-region="" class="highlightText" width="40px" valign="top" style="font-size:21px;font-weight:bold; padding-top:5px">1.</td>
+            <td pardot-region="" valign="top">Donec id metus et eros porttitor ultrices. Praesent quis diam sit amet massa pellentesque auctor at ac massa.</td>
+          </tr>
+          <tr>
+            <td pardot-region="" class="highlightText" width="40px" valign="top" style="font-size:21px;font-weight:bold; padding-top:5px">2.</td>
+            <td pardot-region="" valign="top">Donec id metus et eros porttitor ultrices. Praesent quis diam sit amet massa pellentesque auctor at ac massa.</td>
+          </tr>
+          <tr>
+            <td pardot-region="" class="highlightText" width="40px" valign="top" style="font-size:21px;font-weight:bold; padding-top:5px">3.</td>
+            <td pardot-region="" valign="top">Donec id metus et eros porttitor ultrices. Praesent quis diam sit amet massa pellentesque auctor at ac massa.</td>
+          </tr>
+        </mj-table>
+        <!-- Centered Text -->
+        <mj-text align="center">
+          <div id="pardot-region">Nullam eu tempus dui, et iaculis massa. Duis efficitur turpis sed suscipit imperdiet. Ut euismod malesuada orci, at tincidunt mauris condimentum malesuada. Nulla nec dictum velit.</div>
+        </mj-text>
+        <!-- Centered Large Button -->
+        <mj-button mj-class="whiteText bigButton">
+          Learn More About Our Services
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Section With Primary Background Color and White Text -->
+    <mj-section mj-class="darkBG">
+      <mj-column>
+        <!-- Heading -->
+        <mj-text align="center" mj-class="h1 whiteText">
+          <div id="pardot-region">LOREM IPSUM DOLOR SIT AMET</div>
+        </mj-text>
+        <!-- Content -->
+        <mj-text align="center" mj-class="secondaryText">
+          <div id="pardot-region">Vestibulum at fermentum diam. Integer suscipit erat quis risus tempor bibendum. Quisque vulputate est felis, tincidunt consectetur lorem tristique nec. Aenean dapibus hendrerit dolor vitae placerat. Etiam sem enim, aliquet sit amet nisl vitae, maximus ornare eros.</div>
+        </mj-text>
+        <!-- Centered Button -->
+        <mj-button mj-class="whiteText">
+          RSVP Now
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- 35/65 Section with Image Left & Article Right -->
+    <mj-section padding-top="40px">
+      <mj-column width="35%">
+        <mj-image src="http://via.placeholder.com/480x480" align="center" />
+      </mj-column>
+      <mj-column width="65%">
+        <!-- Article Header -->
+        <mj-text mj-class="h4 primaryText">
+          <div id="pardot-region">LOREM IPSUMING</div>
+        </mj-text>
+        <!-- Article Text -->
+        <mj-text>
+          <div id="pardot-region">Nullam eu tempus dui, et iaculis massa. Duis efficitur turpis sed suscipit imperdiet. Ut euismod malesuada orci, at tincidunt mauris condimentum malesuada. Nulla nec dictum velit, congue semper mauris.</div>
+        </mj-text>
+
+        <!-- Article Link -->
+        <mj-button mj-class="readMore">
+          Read More
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- 65/35 Section with Article Left & Image Right -->
+    <mj-section direction="rtl">
+      <mj-column width="35%">
+        <mj-image src="http://via.placeholder.com/480x480" align="center" />
+      </mj-column>
+      <mj-column width="65%">
+        <!-- Article Header -->
+        <mj-text mj-class="h4 primaryText">
+          <div id="pardot-region">LOREM IPSUMING</div>
+        </mj-text>
+        <!-- Article Text -->
+        <mj-text>
+          <div id="pardot-region">Nullam eu tempus dui, et iaculis massa. Duis efficitur turpis sed suscipit imperdiet. Ut euismod malesuada orci, at tincidunt mauris condimentum malesuada. Nulla nec dictum velit, congue semper mauris.</div>
+        </mj-text>
+        <!-- Article Link -->
+        <mj-button mj-class="readMore">
+          Read More
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- 35/65 Section with Image Left & Article Right -->
+    <mj-section>
+      <mj-column width="35%">
+        <mj-image src="http://via.placeholder.com/480x480" align="center" />
+      </mj-column>
+      <mj-column width="65%">
+        <!-- Article Header -->
+        <mj-text mj-class="h4 primaryText">
+          <div id="pardot-region">LOREM IPSUMING</div>
+        </mj-text>
+        <!-- Article Text -->
+        <mj-text>
+          <div id="pardot-region">Nullam eu tempus dui, et iaculis massa. Duis efficitur turpis sed suscipit imperdiet. Ut euismod malesuada orci, at tincidunt mauris condimentum malesuada. Nulla nec dictum velit, congue semper mauris.</div>
+        </mj-text>
+        <!-- Article Link -->
+        <mj-button mj-class="readMore">
+          Read More
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Divider Section -->
+    <mj-section>
+      <mj-column>
+        <mj-divider />
+      </mj-column>
+    </mj-section>
+
+    <!-- 50/50 Section with Image Left & Article Right -->
+    <mj-section>
+      <mj-column width="50%">
+        <mj-image src="http://via.placeholder.com/480x360" align="center" />
+      </mj-column>
+      <mj-column width="50%">
+        <!-- Article Header -->
+        <mj-text mj-class="h4 primaryText">
+          <div id="pardot-region">LOREM IPSUMING</div>
+        </mj-text>
+        <!-- Article Text -->
+        <mj-text>
+          <div id="pardot-region">Nullam eu tempus dui, et iaculis massa. Duis efficitur turpis sed suscipit imperdiet. Ut euismod malesuada orci.</div>
+        </mj-text>
+        <!-- Button -->
+        <mj-button mj-class="whiteText" align="left">
+          Learn More
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- 50/50 Section with Article Left & Image Right -->
+    <mj-section direction="rtl">
+      <mj-column width="50%">
+        <mj-image src="http://via.placeholder.com/480x360" align="center" />
+      </mj-column>
+      <mj-column width="50%">
+        <!-- Article Header -->
+        <mj-text mj-class="h4 primaryText">
+          <div id="pardot-region">LOREM IPSUMING</div>
+        </mj-text>
+        <!-- Article Text -->
+        <mj-text>
+          <div id="pardot-region">Nullam eu tempus dui, et iaculis massa. Duis efficitur turpis sed suscipit imperdiet. Ut euismod malesuada orci.</div>
+        </mj-text>
+        <!-- Button -->
+        <mj-button mj-class="whiteText" align="left">
+          Learn More
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Divider Section -->
+    <mj-section>
+      <mj-column>
+        <mj-divider />
+      </mj-column>
+    </mj-section>
+
+    <!-- 50/50 Section with Image on Top of Article -->
+    <mj-section>
+      <mj-column width="50%">
+        <!-- Aricle Image -->
+        <mj-image src="http://via.placeholder.com/480x360" align="center" />
+        <!-- Article Header -->
+        <mj-text mj-class="h4 primaryText">
+          <div id="pardot-region">LOREM IPSUMING</div>
+        </mj-text>
+        <!-- Article Text -->
+        <mj-text>
+          <div id="pardot-region">Nullam eu tempus dui, et iaculis massa. Duis efficitur turpis sed suscipit imperdiet. Ut euismod malesuada orci.</div>
+        </mj-text>
+        <!-- Button -->
+        <mj-button mj-class="whiteText" align="left">
+          Learn More
+        </mj-button>
+      </mj-column>
+      <mj-column width="50%">
+        <!-- Aricle Image -->
+        <mj-image src="http://via.placeholder.com/480x360" align="center" />
+        <!-- Article Header -->
+        <mj-text mj-class="h4 primaryText">
+          <div id="pardot-region">LOREM IPSUMING</div>
+        </mj-text>
+        <!-- Article Text -->
+        <mj-text>
+          <div id="pardot-region">Nullam eu tempus dui, et iaculis massa. Duis efficitur turpis sed suscipit imperdiet. Ut euismod malesuada orci.</div>
+        </mj-text>
+        <!-- Button -->
+        <mj-button mj-class="whiteText" align="left">
+          Learn More
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Divider Section -->
+    <mj-section>
+      <mj-column>
+        <mj-divider />
+      </mj-column>
+    </mj-section>
+
+    <!-- 33/33/33 Section with Image on Top of Article -->
+    <mj-section>
+      <mj-column width="33%">
+        <!-- Aricle Image -->
+        <mj-image src="http://placehold.it/480x480" align="center" />
+        <!-- Article Text -->
+        <mj-text align="center">
+          <div id="pardot-region">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        </mj-text>
+        <!-- Button -->
+        <mj-button mj-class="whiteText">
+          Learn More
+        </mj-button>
+      </mj-column>
+      <mj-column width="33%">
+        <!-- Aricle Image -->
+        <mj-image src="http://placehold.it/480x480" align="center" />
+        <!-- Article Text -->
+        <mj-text align="center">
+          <div id="pardot-region">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        </mj-text>
+        <!-- Button -->
+        <mj-button mj-class="whiteText">
+          Learn More
+        </mj-button>
+      </mj-column>
+      <mj-column width="33%">
+        <!-- Aricle Image -->
+        <mj-image src="http://placehold.it/480x480" align="center" />
+        <!-- Article Text -->
+        <mj-text align="center">
+          <div id="pardot-region">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        </mj-text>
+        <!-- Button -->
+        <mj-button mj-class="whiteText">
+          Learn More
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer Section -->
+    <mj-section mj-class="darkBG" padding="40px 0px 10px 0px">
+      <!-- Left Column Logo -->
+      <mj-column vertical-align="bottom">
+        <mj-image href="#" src="https://maljenkins.github.io/cheshPublic/images/cheshlogodark.png" fluid-on-mobile="false" width="150px" align="left" />
+      </mj-column>
+      <!-- Right Column Footer Text -->
+      <mj-column vertical-align="bottom">
+        <mj-text mj-class="whiteText h6" align="right" padding-top="0px" padding-bottom="0px">
+          <a pardot-region="" href="#" class="whiteLink"><span>%%account_address%%</span></a>
+        </mj-text>
+        <mj-text mj-class="whiteText h6" align="right" padding-top="0px" padding-bottom="0px">
+          <div id="pardot-region"><a href="%%unsubscribe%%" class="whiteLink"><span>Unsubscribe</span></a> | © 2019 Cheshire Impact</div>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
