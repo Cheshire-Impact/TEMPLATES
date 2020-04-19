@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i");
+.bg-primary {
+  background-color: #ff7300 !important;
+}
+
+.bg-secondary {
+  background-color: #082b4b !important;
+}
+
+.bg-secondary-darker {
+  background-color: #051c31 !important;
+}
+
+.text-primary {
+  color: #ff7300 !important;
+}
+
+.text-secondary {
+  color: #082b4b !important;
+}
+
+.btn-primary {
+  background-color: #ff7300 !important;
+  border-color: #ff7300 !important;
+}
+
+.btn-secondary {
+  background-color: #082b4b !important;
+  border-color: #082b4b !important;
+}
+
+body {
+  font-family: "Open Sans";
+  color: #212529;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: "Lato";
+}
+
+section {
+  padding: 2rem 0;
+}
+
+@media (min-width: 992px) {
+  section {
+    padding: 6rem 0;
+  }
+}
+
+#mainNav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 700;
+  font-family: "Lato";
+}
+
+#mainNav .navbar-brand {
+  color: #fff;
+}
+
+#mainNav .navbar-nav {
+  margin-top: 1rem;
+  letter-spacing: 0.0625rem;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link {
+  color: #fff;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+  color: #ff7300;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:active {
+  color: #fff;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:focus {
+  color: #fff;
+}
+
+#mainNav .navbar-nav li.nav-item.active {
+  color: #ff7300;
+}
+
+#mainNav .navbar-toggler {
+  font-size: 80%;
+  padding: 0.8rem;
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+  }
+  #mainNav .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: font-size 0.3s;
+    transition: font-size 0.3s;
+  }
+  #mainNav .navbar-nav {
+    margin-top: 0;
+  }
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.focus,
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.hover {
+    color: #fff;
+    background: #ff7300;
+  }
+  #mainNav .navbar-shrink {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  #mainNav .navbar-shrink .navbar-brand {
+    font-size: 1.5em;
+  }
+}
+
+header.masthead {
+  padding-top: calc(3rem + 72px);
+  padding-bottom: 3rem;
+}
+
+header.masthead h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+header.masthead h2 {
+  font-size: 1.3rem;
+  font-family: "Lato";
+}
+
+header {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+@media (min-width: 992px) {
+  header.masthead {
+    padding-top: calc(6rem + 106px);
+    padding-bottom: 6rem;
+  }
+  header.masthead h1 {
+    font-size: 4.75em;
+    line-height: 4rem;
+  }
+  header.masthead h2 {
+    font-size: 1.75em;
+  }
+}
+
+@media (min-width: 768px) {
+  section.prefooter {
+    padding: 20px 0;
+    font-size: 24px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #082b4b;
+  color: #fff;
+}
+
+.copyright {
+  background-color: #051c31;
+  color: #fff;
+  font-size: 0.8em;
+  padding: 2rem 0;
+}
+
+.btn-social {
+  width: 3.25rem;
+  height: 3.25rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,214 @@
+// Font Variables
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i");
+
+$open-sans: "Open Sans";
+$lato: "Lato";
+
+// Color Variables
+
+$body: #212529;
+$primary: #ff7300;
+$secondary: #082b4b;
+$secondary-darker: #051c31;
+$nav-default: #fff;
+
+// Color Classes
+.bg-primary {
+  background-color: $primary !important;
+}
+.bg-secondary {
+  background-color: $secondary !important;
+}
+.bg-secondary-darker {
+  background-color: $secondary-darker !important;
+}
+.text-primary {
+  color: $primary !important;
+}
+.text-secondary {
+  color: $secondary !important;
+}
+.btn-primary {
+  background-color: $primary !important;
+  border-color: $primary !important;
+}
+.btn-secondary {
+  background-color: $secondary !important;
+  border-color: $secondary !important;
+}
+
+// Default Stylings
+
+body {
+  font-family: $open-sans;
+  color: $body;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: $lato;
+}
+section {
+  padding: 2rem 0;
+}
+
+// Desktop Section Styles
+
+@media (min-width: 992px) {
+  section {
+    padding: 6rem 0;
+  }
+}
+
+// Default (Mobile) Navigation Styles
+
+#mainNav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 700;
+  font-family: $lato;
+  .navbar-brand {
+    color: $nav-default;
+  }
+  .navbar-nav {
+    margin-top: 1rem;
+    letter-spacing: 0.0625rem;
+    li.nav-item {
+      a.nav-link {
+        color: $nav-default;
+        &:hover {
+          color: $primary;
+        }
+        &:active {
+          color: $nav-default;
+        }
+        &:focus {
+          color: $nav-default;
+        }
+      }
+      &.active {
+        color: $primary;
+      }
+    }
+  }
+  .navbar-toggler {
+    font-size: 80%;
+    padding: 0.8rem;
+  }
+}
+
+// Desktop Nav Styles
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    .navbar-brand {
+      font-size: 2em;
+      -webkit-transition: font-size 0.3s;
+      -moz-transition: font-size 0.3s;
+      transition: font-size 0.3s;
+    }
+    .navbar-nav {
+      margin-top: 0;
+    }
+    .navbar-nav > li.nav-item > a.nav-link.active,
+    .navbar-nav > li.nav-item > a.nav-link.focus,
+    .navbar-nav > li.nav-item > a.nav-link.hover {
+      color: #fff;
+      background: $primary;
+    }
+    .navbar-shrink {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      .navbar-brand {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+// Default (Mobile) Hero Styles
+
+header.masthead {
+  padding-top: calc(3rem + 72px);
+  padding-bottom: 3rem;
+}
+header.masthead h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+header.masthead h2 {
+  font-size: 1.3rem;
+  font-family: $lato;
+}
+
+header {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+// Desktop Hero Styles
+
+@media (min-width: 992px) {
+  header.masthead {
+    padding-top: calc(6rem + 106px);
+    padding-bottom: 6rem;
+  }
+  header.masthead h1 {
+    font-size: 4.75em;
+    line-height: 4rem;
+  }
+  header.masthead h2 {
+    font-size: 1.75em;
+  }
+}
+
+// Desktop Prefooter Section
+
+@media (min-width: 768px) {
+  section.prefooter {
+    padding: 20px 0;
+    font-size: 24px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+// Footer Styles
+
+footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: $secondary;
+  color: #fff;
+}
+.copyright {
+  background-color: $secondary-darker;
+  color: #fff;
+  font-size: 0.8em;
+  padding: 2rem 0;
+}
+
+// Social Share
+
+.btn-social {
+  width: 3.25rem;
+  height: 3.25rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
