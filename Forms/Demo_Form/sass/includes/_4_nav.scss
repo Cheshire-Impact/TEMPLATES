@@ -1,0 +1,30 @@
+/* -------------------------------------------------------------------------- */
+/*                             Base Navbar Styles                             */
+/* -------------------------------------------------------------------------- */
+
+nav.navbar {
+  // Logo
+  .navbar-brand {
+  }
+  // Mobile Nav Toggle Button
+  .navbar-toggler {
+    // Nav Toggle Button Icon
+    .navbar-toggler-icon {
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                      Default (Expanded) Navbar Styles                      */
+/* -------------------------------------------------------------------------- */
+
+.navbar-collapse {
+  ul.navbar-nav {
+    li.nav-item {
+      a.nav-link {
+        &:hover {
+        }
+      }
+    }
+  }
+}
